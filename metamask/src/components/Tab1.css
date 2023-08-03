@@ -1,0 +1,277 @@
+/* Ẩn tất cả các khung con */
+.popover-wrap {
+    display: none;
+    position: fixed; /* Sử dụng 'position: fixed' để giữ khung con giữa trang */
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Dùng 'transform' để căn giữa khung con */
+    z-index: 9999; /* Đảm bảo khung con hiển thị trên các thành phần khác */
+    background-color: #fff; /* Tùy chỉnh màu nền của khung con */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    height: auto;
+  }
+  
+  /* Hiển thị khung con có lớp 'active' */
+  .popover-wrap.popover-active {
+    display: block;
+  }
+
+  .popover-header_title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .popover-header_title h2 {
+    margin: 0;
+    text-align: center;
+    flex: 1; 
+    font-size: 18px;
+    margin-top: -5px;
+  }
+
+  .mm-button-icon {
+    position: absolute;
+    top:15px; /* Điều chỉnh giá trị top theo vị trí mong muốn */
+    right: 10px; /* Điều chỉnh giá trị left theo vị trí mong muốn */
+    transform: translate(0, 0);
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+  }
+  .multichain-network-list-items .mm-avatar-base1{
+    display: flex;
+    margin-top: 20px;
+    padding: 5px;
+  
+  }
+ 
+  .mm-text--inherit{
+    background-color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .popover-content{
+    margin-left: -10px;
+    
+  }
+  .mm-avatar-base1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    width: 310px;
+  }
+
+  
+/* Thêm các quy tắc CSS sau để tạo hiệu ứng khi chọn mm-avatar-base */
+.multichain-network-list-items.selected::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 50px;
+  background-color: #0376c9;
+  position: absolute;
+  left: 0;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.multichain-network-list-items.selected .mm-avatar-base1 {
+  background-color: #e6f7ff; 
+}
+.multichain-network-list-items.selected .mm-text--inherit {
+  background-color: #e6f7ff; 
+}
+.mm-avatar-base1:hover{
+  background-color: #f2f4f6;
+}
+.mm-avatar-base1:hover button{
+  background-color: #f2f4f6;
+}
+/* Section.css hoặc Tab1.css */
+
+.box--padding-4-bottom {
+  padding-bottom: 20px; /* Điều chỉnh giá trị padding dưới tùy ý */
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+.box-button-base {
+  display: inline-block;
+  width: 262px ;
+  height: 46px;
+  border: 1px solid #0376c9; 
+  border-radius: 25px; 
+  background-color: #fff; 
+  color: #333; 
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 28px;
+}
+.box-button-base span{
+  color: #0376c9;
+  font-weight: bold;
+  font-size: 15px;
+}
+.box-button-base:hover{
+  background-color: #0376c9;
+}
+.box-button-base:hover span{
+  color: #fff;
+}
+/*toogle*/
+.mm-text--body-md{
+  padding: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sliders {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border: #a5a3a3 solid 2px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliders:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.sliders {
+  background-color: white;
+  border: #2196F3 solid 2px;
+}
+
+input:focus+.sliders{
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.sliders:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+  background-color: #2196F3;
+}
+
+/* Rounded sliders */
+.sliders.round {
+  border-radius: 24px;
+}
+
+.sliders.round:before {
+  border-radius: 50%;
+}
+
+/*Tab2*/
+.popover-bg {
+  display: flex;
+  align-items: center; 
+  gap: 16px; 
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #e6f7ff;
+  width: 287px;
+  height: 50px;
+  border-left: 3px solid #0376c9;
+}
+.popover-bg:hover {
+  background-color:rgba(234, 194, 142, 0.034);
+}
+.pp-button-base:hover {
+  background-color:rgba(234, 194, 142, 0.034);
+}
+.mm-avatar-account_jazzicon svg{
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.multichain-account-list-item__content {
+  display: flex;
+  flex: 1; 
+  justify-content: space-between; 
+  align-items: center; 
+  cursor: pointer;
+}
+
+.pp-box {
+  display: flex;
+  gap: 80px;
+  margin-top: -22px;
+  margin-left: 30px; 
+}
+.pp-button-base{
+  border-color: #fff;
+  background-color: #e6f7ff;
+  border-style: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.currency-display-component{
+  cursor: pointer;
+}
+.mm-icon2{
+  cursor: pointer;
+}
+.mm-icon2:hover img{
+  background-color: rgba(234, 194, 142, 0.034);
+}
+.multichain-account-list-item__content2{
+  margin-top: 5px;
+  margin-left: 30px;
+  display: flex;
+}
+.pp-box2{
+  display: flex;
+  gap: 95px;
+}
+.pp-box-link{
+  padding: 10px;
+  margin-top: 10px;
+}
+.pp-box--padding-4{
+  margin-top: 25px;
+}
+.pp-button_base span{
+  font-weight: bold;
+  color: #2196F3;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.pp-button_base{
+  border-color: #fff;
+  border-style: none;
+  background-color: #fff;
+  display: flex;
+}

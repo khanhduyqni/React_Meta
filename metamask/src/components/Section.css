@@ -1,0 +1,348 @@
+/*head-slider*/
+.Container{
+    width: 950px;
+    height: 950px;
+    background-color: #fff;
+}
+.head-slider{
+    width: 100%;
+    max-width: 950px;
+    min-height: 50px;
+    background-color: #fff;
+    margin-top: 5px;
+    display: flex;
+    box-shadow:  0 5px 6px rgba(0, 0, 0, 0.1);;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px; 
+    height: 30px; 
+    border: 0px solid #333; 
+    border-radius: 20px; 
+    background-color: #f0f0f0; 
+    cursor: pointer;
+    outline: none;
+    margin: 15px;
+}
+.logo img{
+    width: 16px;
+    height: 16px;
+}
+/*acc-slider*/
+.account {
+    display: flex;
+    gap: 10px; 
+   align-items: center;
+   justify-content: center;
+    width: 500px; 
+    height: 35px; 
+    border: 0px solid #333; 
+    border-radius: 10px; 
+    background-color: #fff; 
+    cursor: pointer;
+    outline: none;
+    margin: 12px;
+}
+.account:hover{
+    background-color: #f2f4f6;
+}
+.rounded-svg {
+    border-radius: 50%; 
+}
+.account .mm-text1{
+    font-weight: Bold;
+    font-size: 1.2em;
+}
+.left-fav-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px; 
+    height: 30px; 
+    border: 0px solid #333; 
+    border-radius: 20px; 
+    background-color: #fff; 
+    cursor: pointer;
+    outline: none;
+    margin: 15px;
+}
+.mm-fav:hover{
+    background-color: #f2f4f6;
+}
+.mm-fav{
+    margin-left: auto;
+}
+/*content-slider*/
+.main-container {
+    display: flex;
+    justify-content: center; 
+  }
+.wallet-overview{
+    display: flex;
+    justify-content: center; 
+}
+.ww-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px; 
+    height: 30px; 
+    border: 0px solid #333; 
+    border-radius: 20px; 
+    background-color: #eaf6ff; 
+    cursor: pointer;
+    outline: none;
+    margin: 15px;
+    gap: 10px;
+}
+.ww-text span{
+    color: #0376c9;
+    font-size: 1.1em;
+}
+.eth-overview{
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Thêm luật CSS để tạo box cho các button */
+.wallet-overview-buttons {
+    display: flex; 
+    justify-content: space-between;
+     
+  }
+.icon-eth-button {
+    border: 1px solid #ccc; 
+    width: 40px;
+    height: 40px;
+    border-radius: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8; 
+    cursor: pointer; 
+    margin: 10px;
+    background-color: #0376c9;
+    margin-top: 30px;
+    align-items: center;
+  
+  }
+
+.icon-eth-button img {
+    margin-top: 5px;
+    filter: invert(100%); 
+  }
+.icon-eth-button p {
+    word-wrap: break-word; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+  }
+  
+/*list*/
+.mm-box{
+    margin-top: 50px;
+}
+.box-tabs {
+    justify-content: center; 
+  }
+  .box-tabs-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .box-tab-home-list { 
+    text-align: center;
+    padding: 8px;
+    position: relative;
+  }
+  .box-box {
+    background-color: #fff;
+    border: 0px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 300px;
+    justify-content: center;
+}
+
+/*TabToken*/
+
+.mm-box-multichain-token{
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+}
+.mm-box-multichain-token:hover{
+    background-color: #f0f0f0;
+}
+.mm-badge-wrapper{
+    position: relative;
+    display: inline-block;
+}
+.mm-avatar-base .big{
+    padding: 6px;
+    background-color: #1a45d163;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.mm-badge-wrapper .small{
+    position: absolute;
+    top: -55px;
+    right: -55px;
+    padding: 1px;
+    background-color: aliceblue;
+}
+.mm-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .mm-box-text {
+    margin: 0;
+    font-weight: bold;
+    margin-top: -35px;
+    margin-left: 20px;
+  }
+  
+  .mm-text {
+    margin-top: 8px;
+    margin-left: 20px;
+  }
+/*multichain-import-token-link*/
+.box-box-token {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+  
+  .mm-button-base {
+    display: flex;
+    align-items: center; 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mm-button-base img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px; 
+  }
+  .mm-icon{
+    color: #0376c9;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .mm-button-base a {
+    text-decoration: none;
+  }
+  .mm-button-base:hover .mm-icon {
+    color: #c2c0c070; 
+  }
+  /*TabNFT*/
+  .message-dialog {
+    border: 1px solid #0376c9;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #eaf6ff;
+    margin-top: 15px;
+  }
+  .box-nfts-detection-notice{
+    padding: 16px;
+  }
+  .box-message{
+    display: flex;
+  }
+  .box-info-circle img{
+    font: inherit(100%);
+  }
+  .box-padding-left-2{
+    margin-top: -38px;
+    margin-left: 10px;
+  }
+  .nfts-text{
+    font-size: 14px;
+  }
+  .nfts-text-bottom{
+    margin-top: -20px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .btn-link{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #0376c9;
+    cursor: pointer;
+  }
+  .me-box {
+    justify-content: center; /* Căn chỉnh hình ảnh theo chiều ngang (trục x) vào giữa container */
+    align-items: center; /* Căn chỉnh hình ảnh theo chiều dọc (trục y) vào giữa container */
+    height: 100%; /* Chiều cao của container sẽ được căn chỉnh theo nội dung (hình ảnh) */
+  }
+  
+  /* Định dạng hình ảnh trong container */
+  .me-box-img img {
+    /* Căn chỉnh hình ảnh vào giữa container */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+ .nfts-tabs-link{
+  text-align: center;
+ }
+ .me-text-heading{
+  color: rgb(186, 182, 182);
+ }
+ .me-button-base{
+  color: #0376c9;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bolder;
+ }
+ .nfts-tabs-button{
+  margin-top: 100px;
+}
+/*TabAct*/
+.box-act-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.transaction-list{
+  margin-top: 20px;
+}
+.transaction-list_empty-text{
+  color: rgb(186, 182, 182);
+}
+.box-act-content .box-box-token {
+  margin-top: 25px; /* Điều chỉnh khoảng cách theo nhu cầu */
+}
+.box-act-content .box-box-token:hover {
+  background-color: #ffffff;
+}
+.box-act-content .mm-button-base {
+  display: flex;
+  align-items: center;
+}
+
+.box-act-content .mm-icon {
+  margin-left: 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+}
+
+.box-tab-home-list.active::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #0376c9;
+  color: #0376c9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+}
