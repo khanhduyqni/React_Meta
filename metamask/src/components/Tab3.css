@@ -1,32 +1,9 @@
  /* Tab3.css */
-/* CSS cho khung Tab 3 */
 
-.popover-content3 {
-  display: none;
-  position: fixed;
-  top: -100%; /* Đưa khung vào giữa theo chiều dọc */
-  left: 190%; /* Đưa khung vào bên phải cách lề phải 20px */
-  transform: translate(-50%, -50%); /* Đưa khung vào giữa chính xác */
-  z-index: 9999;
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 232px;
-  height: 255px;
-}
-
-/* Hiển thị khung Tab 3 khi có lớp 'popover-active' */
-.popover-wrap.popover-active .popover-content3 {
-  display: block;
-}
 .menu_container {
   display: flex;
   flex-direction: column;
 }
-
-  /* Kiểu dáng cho các mục trong menu (nút và đoạn văn) */
   .menu_items {
     display: flex;
     align-items: center;
@@ -35,10 +12,9 @@
     cursor: pointer;
   }
   .menu_container p {
-    margin: 4px 0;
+    margin: 4px 10;
     font-size: 14px;
-   
   }
-  
-  /* Các kiểu CSS khác cho thành phần Tab3... */
-  
+  .items{
+    display: flex;
+  }

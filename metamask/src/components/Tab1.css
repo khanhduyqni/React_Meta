@@ -1,11 +1,9 @@
 /* Ẩn tất cả các khung con */
 .popover-wrap {
     display: none;
-    position: fixed; /* Sử dụng 'position: fixed' để giữ khung con giữa trang */
-    top: 38%;
-    left: 50%;
+    position: absolute; /* Sử dụng 'position: fixed' để giữ khung con giữa trang */
     transform: translate(-50%, -50%); /* Dùng 'transform' để căn giữa khung con */
-    z-index: 9999; /* Đảm bảo khung con hiển thị trên các thành phần khác */
+    z-index: 1; /* Đảm bảo khung con hiển thị trên các thành phần khác */
     background-color: #fff; /* Tùy chỉnh màu nền của khung con */
     padding: 20px;
     border: 1px solid #ccc;
@@ -16,10 +14,25 @@
   }
   
   /* Hiển thị khung con có lớp 'active' */
-  .popover-wrap.popover-active {
+  .tab.active .popover-wrap  {
     display: block;
   }
-
+  .popover-tab1 {
+    top: 37%;
+    left: 50%;
+  }
+  
+  .popover-tab2 {
+    top: 37%;
+    left: 50%;
+  }
+  
+  .popover-tab3 {
+    top:  23%;
+    left: 88%;
+    width: 210px;
+    height: 230px;
+  }
   .popover-header_title {
     display: flex;
     align-items: center;
@@ -57,7 +70,7 @@
     cursor: pointer;
   }
   .popover-content{
-    margin-left: -10px;
+    margin-left: -20px;
     
   }
   .mm-avatar-base1 {
@@ -201,9 +214,10 @@ input:checked+.sliders:before {
   padding: 10px;
   margin-top: 20px;
   background-color: #e6f7ff;
-  width: 287px;
+  width: 297px;
   height: 50px;
   border-left: 3px solid #0376c9;
+  margin-left: -20px;
 }
 .popover-bg:hover {
   background-color:rgba(234, 194, 142, 0.034);
@@ -259,6 +273,7 @@ input:checked+.sliders:before {
 .pp-box-link{
   padding: 10px;
   margin-top: 10px;
+  margin-left: -20px;
 }
 .pp-box--padding-4{
   margin-top: 25px;
@@ -274,4 +289,14 @@ input:checked+.sliders:before {
   border-style: none;
   background-color: #fff;
   display: flex;
+}
+.new-account-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 232px;
+  background-color: rgb(137, 61, 61); /* Optional: Adding a semi-transparent background for visibility */
+  z-index: 2; /* Ensure it's above the existing frame */
+  /* Additional styling for the new frame */
 }

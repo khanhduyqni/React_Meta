@@ -9,17 +9,20 @@ import hardware from './fav.icon/hardware.svg'
 function Tab2() {
   const [activeNetwork, setActiveNetwork] = useState(null);
   const [showNewFrame, setShowNewFrame] = useState(false);
+  const [showNewAccountFrame, setShowNewAccountFrame] = useState(false); // New state for the new account frame
+
 
   const handleNetworkClick = (networkName) => {
     setActiveNetwork(networkName);
   };
 
   const handleCloseClick = () => {
-    setActiveNetwork(null); // Tắt khung đi bằng cách đặt activeNetwork thành null
+    setActiveNetwork(null); 
   };
 
-  const handleToggleClick = () => {
-    setShowNewFrame(!showNewFrame);
+  const handleAddAccountClick = () => {
+    setShowNewAccountFrame(true); // Show the new account frame when "Add account" is clicked
+    setShowNewFrame(false); // Hide the existing frame when "Add account" is clicked
   };
   return (
     <div className='popover-wrap-concept'>
@@ -91,7 +94,7 @@ function Tab2() {
       </div>
       <div className='pp-box-link'>
         <div className='pp-box--padding-4'>
-            <button className='pp-button_base'>
+            <button className='pp-button_base'onClick={handleAddAccountClick}>
               <img src={add} style={{
                 width:'14px',
                 height: '14px'
@@ -118,6 +121,13 @@ function Tab2() {
             </button>
         </div>
       </div>
+      {showNewAccountFrame && (
+        <div className='new-account-frame'>
+          {/* Add the JSX content for the new account frame here */}
+          <h2>Create a New Account</h2>
+          {/* ... Input and buttons for creating new account ... */}
+        </div>
+      )}
     </div>
   );
 }

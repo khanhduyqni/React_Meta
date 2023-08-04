@@ -31,6 +31,11 @@
     height: 16px;
 }
 /*acc-slider*/
+.tab-container {
+  display: flex;
+}
+
+
 .account {
     display: flex;
     gap: 10px; 
