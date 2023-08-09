@@ -15,31 +15,16 @@ import Tab2 from './Tab2'
 import Tab3 from './Tab3'
 function Section() {
     const [activeTab, setActiveTab] = useState(null);
-    const popoverRef = useRef(null);
 
     const handleTabClick = (tabName) => {
         setActiveTab((prevActiveTab) => (prevActiveTab === tabName ? null : tabName));
     };
 
-
-    // useEffect(() => {
-    //     // Xử lý sự kiện khi người dùng nhấp chuột bên ngoài khung con
-    //     const handleClickOutside = (event) => {
-    //       if (popoverRef.current && !popoverRef.current.contains(event.target)) {
-    //         setActiveTab(null);
-    //       }
-    //     };
-
-    // Đăng ký sự kiện khi component được mount và hủy đăng ký khi component bị unmount
-    // document.addEventListener('click', handleClickOutside);
-
-    // Thêm console.log() để kiểm tra
-    //     console.log('handleClickOutside is registered.');
-
-    //     return () => {
-    //       document.removeEventListener('click', handleClickOutside);
-    //     };
-    //   }, []);
+    const handleTabClose = () => {
+        setActiveTab(null); // Bạn cần chuyển activeTab sang null để ẩn popover và Tab1
+      }
+    
+    
     return (
         <div className='Container'>
             <div className='slider'>
@@ -56,7 +41,7 @@ function Section() {
                             </button>
                             {activeTab === 'Tab1' && (
                                 <div className='popover-wrap popover-tab1'>
-                                    <Tab1 />
+                                    <Tab1 onClose={handleTabClose} />
                                 </div>
                             )}
                         </div>
@@ -79,7 +64,7 @@ function Section() {
                             </button>
                             {activeTab === 'Tab2' && (
                                 <div className='popover-wrap popover-tab2'>
-                                    <Tab2 />
+                                    <Tab2 onClose={handleTabClose}/>
                                 </div>
                             )}
                         </div>
@@ -94,7 +79,7 @@ function Section() {
                             </button>
                             {activeTab === 'Tab3' && (
                                 <div className='popover-wrap popover-tab3'>
-                                    <Tab3 />
+                                    <Tab3 onClose={handleTabClose}/>
                                 </div>
                             )}
                         </div>

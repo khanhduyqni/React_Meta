@@ -7,9 +7,15 @@ import message from './fav.icon/message-question.svg'
 import setting from './fav.icon/setting.svg'
 import lock from './fav.icon/lock.svg'
 
-function Tab3() {
+function Tab3({ onClose }) {
+  const [showPopover, setShowPopover] = useState(true); // Thêm state để kiểm soát hiển thị khung
+
+  const handleCloseClick = () => {
+    setShowPopover(false);
+    onClose(); // Gọi hàm onClose khi bấm nút "close"
+  };
   return (
-    <div className="centered-popover">
+    <div className="centered-popover" onClick={handleCloseClick}>
       <div className='menu_container'>
         <div className='items'>
           <button className='menu_items'>

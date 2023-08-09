@@ -8,7 +8,7 @@ import goerli from './Goerli1-logo.png';
 import sepolia from './Sepolia-logo1.png';
 import linea2 from './linea-logo-testnet.png';
 
-function Tab1() {
+function Tab1({ onClose }) {
   const [activeNetwork, setActiveNetwork] = useState(null);
   const [showNewFrame, setShowNewFrame] = useState(false);
   const [showPopover, setShowPopover] = useState(true); // Thêm state để kiểm soát hiển thị khung
@@ -18,7 +18,8 @@ function Tab1() {
   };
 
   const handleCloseClick = () => {
-    setShowPopover(false); // Đóng khung bằng cách ẩn nó đi
+    setShowPopover(false);
+    onClose(); // Gọi hàm onClose khi bấm nút "close"
   };
 
   const handleToggleClick = () => {
@@ -27,7 +28,7 @@ function Tab1() {
 
   return (
     <>
-      {showPopover && ( // Hiển thị khung nếu showPopover là true
+      {showPopover && ( 
         <div className='popover-wrap-concept'>
           <div className='popover-header'>
             <div className='popover-header_title'>
