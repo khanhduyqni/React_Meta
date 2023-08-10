@@ -14,7 +14,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 280px;
-  height: auto;
+ 
 }
 
 .popover-wrap-concept.active+.content-outside-popover {
@@ -44,6 +44,7 @@
   left: 88%;
   width: 210px;
   height: 230px;
+  position: absolute;
 }
 
 .popover-header_title {
@@ -329,8 +330,11 @@ input:checked+.sliders:before {
   color: #2196F3;
   font-size: 15px;
   margin-left: 5px;
+  cursor: pointer;
 }
-
+.pp-button_base:hover span{
+  color: #4878b64a;
+}
 .pp-button_base {
   border-color: #fff;
   border-style: none;
