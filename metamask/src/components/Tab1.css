@@ -250,7 +250,7 @@ input:checked+.sliders:before {
   margin-top: 20px;
   background-color: #e6f7ff;
   width: 297px;
-  height: 50px;
+  height: auto;
   border-left: 3px solid #0376c9;
   margin-left: -20px;
 }
@@ -430,4 +430,23 @@ input:checked+.sliders:before {
 }
 .hidden {
   visibility: hidden;
+}
+.pp-btn {
+  position: relative; /* Đảm bảo phần tử con có vị trí tương đối với nút */
+}
+
+/* CSS cho lớp overlay */
+.overlay {
+  pointer-events: none;
+  opacity: 0.5; 
+}
+
+/* CSS cho lớp phủ khi nút không hoạt động */
+.pp-btn.overlay {
+  cursor: not-allowed;
+}
+
+.account-container.new-account {
+  border-top: 1px solid #e2e2e2; 
+  padding-top: 16px; 
 }
